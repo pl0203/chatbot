@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta chaset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Patrick Chatbot</title>
+        <!-- <link href="style.css" rel="stylesheet"
+        type="text/css" /> -->
+    </head>
+    <body>
+        <script src="script.js"></script>
+        <h1>Welcome!</h1>
+        <h3>Ask anything about me</h3>
+
+        <form action="{{ url_for('chat')}}"method="post">
+            <input type="text" name="input" placeholder="Ask me! Don't be shy.." required="required">
+            <button type="submit" class="btn">Predict</button>
+        </form>
+
+        <br>
+        <br>
+        {{ prediction_text }}
+    </body>
+</html>
